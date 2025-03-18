@@ -1,0 +1,452 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.mainNetflixCONTAINER {
+    position: relative;
+}
+
+.backgroundContainer {
+    background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/42a0bce6-fc59-4c1c-b335-7196a59ae9ab/web_auto_scroll/IN-en-20250303-TRIFECTA-5a51a3d1-4e37-441d-bc08-3597ab68c7b1_small.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px); 
+    height: 100vh;
+    position: relative;
+    z-index: -1; 
+}
+
+.pinkoverlay {
+    background-color: rgba(4, 3, 20, 0.7);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.contentContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0 2rem;
+}
+
+nav {
+    height: 20vh;
+}
+
+.upperNavBarSection {
+    display: flex;
+    height: 50%;
+}
+
+.upperNavBarLeftSection {
+    width: 50%;
+}
+
+.netflixLogo {
+    width: 29%;
+}
+
+.upperNavBarRightSection {
+    width: 50%;
+}
+
+.navbarButtonContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+
+.languageButton {
+    display: flex;
+    padding: 0.4rem 0.8rem;
+    border-radius: 50px;
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    align-items: center;
+}
+
+.signInButton {
+    background-color: red;
+    padding: 0.4rem 0.8rem;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.languageButton p {
+    margin-left: 5px;
+}
+
+.lowerNavBarSection {
+    display: flex;
+    justify-content: center;
+    color: white;
+    height: 50%;
+}
+
+.menuList {
+    width: 40%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    background: rgba(0, 0, 0, 0.7);
+    height: 7vh;
+    align-items: center;
+    border-radius: 50px;
+}
+
+.menuList li {
+    display: flex;
+    align-items: center;
+}
+
+.bannerSection {
+    height: 90vh;
+    border-radius: 20px;
+    background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/42a0bce6-fc59-4c1c-b335-7196a59ae9ab/web_auto_scroll/IN-en-20250303-TRIFECTA-5a51a3d1-4e37-441d-bc08-3597ab68c7b1_large.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5), black);
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.bannerContainer {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.bannerContainer h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.bannerContainer h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.bannerContainer p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.inputContainer {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.email {
+    padding: 0.8rem 1rem;
+    border-radius: 50px;
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    font-size: 1rem;
+    width: 70%;
+}
+
+.getStartedButton {
+    width: 30%;
+    background-color: red;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Carousel Section */
+.carouselSection {
+    margin-top: 4rem;
+    padding: 2rem;
+}
+
+.carouselSection h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.carouselCardConatiner {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.carouselCard {
+    width: 15%; 
+    height: 25vh; 
+    border-radius: 10px; 
+    position: relative;
+    overflow: hidden;
+}
+
+.carouselNumberContainer {
+    position: absolute;
+    left: -20px;
+    top: -10px;
+    z-index: 2;
+}
+
+.carouselNumberContainer span {
+    color: rgba(0, 0, 0, 0.8);
+    -webkit-text-stroke: 0.125rem rgb(255, 255, 255);
+    text-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+    font-size: 3rem;
+}
+
+.carouselImageContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.carouselImageContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 10px; 
+}
+
+/* Plan Section */
+.planSection {
+    margin-top: 4rem;
+    padding: 2rem;
+}
+
+.planSection h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.plansConatiner {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.planCard {
+    width: 23%;
+    height: 38vh;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.372);
+    padding: 2rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.planCard1 {
+    background: linear-gradient(149deg, #1C4072 6.96%, #172B47 40.17%, #120c1f 73.39%);
+}
+
+.planCard2 {
+    background: linear-gradient(149deg, #1D529D 6.96%, #233371 40.17%, #120c1f 73.39%);
+}
+
+.planCard3 {
+    background: linear-gradient(149deg, #792A95 6.96%, #38216C 40.17%, #120c1f 73.39%);
+}
+
+.planCard4 {
+    background: linear-gradient(149deg, #922556 6.96%, #391945 40.17%, #120c1f 73.39%);
+}
+
+.planCard h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.planCard h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.planCard p {
+    font-size: 1rem;
+}
+
+/* Reason to Join Section */
+.reasonToJoinSection {
+    margin-top: 4rem;
+    padding: 2rem;
+}
+
+.reasonToJoinSection h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.reasonsConatiner {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.reasonCard {
+    width: 23%;
+    height: 33vh;
+    border-radius: 20px;
+    background: rgb(47, 47, 47);
+    padding: 2rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.reasonCard h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.reasonCard p {
+    font-size: 0.9rem;
+}
+
+.reasonCardLowerContent {
+    display: flex;
+    justify-content: end;
+}
+
+.reasonCardLowerContent svg {
+    height: 50px;
+    width: 50px;
+}
+
+/* FAQ Section */
+.faqSection {
+    margin-top: 4rem;
+    padding: 2rem;
+}
+
+.faqSection h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.faqCardsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.faqCard {
+    width: 100%;
+}
+
+.faqQuestion, .faqAnswer {
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: #2e2e2e;
+    margin-bottom: 20px;
+}
+
+.faqQuestion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faqQuestion span {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.faqAnswer {
+    display: none;
+}
+
+.faqCard:hover .faqAnswer {
+    display: block;
+}
+
+/* Get Started Section */
+.getStartedSection {
+    margin-top: 4rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.getStartedSection p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.getStartedSection .inputContainer {
+    width: 50%;
+    margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bannerContainer h2 {
+        font-size: 2rem;
+    }
+
+    .bannerContainer h4 {
+        font-size: 1.2rem;
+    }
+
+    .bannerContainer p {
+        font-size: 1rem;
+    }
+
+    .inputContainer {
+        width: 80%;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .email, .getStartedButton {
+        width: 100%;
+    }
+
+    .carouselCard, .planCard, .reasonCard {
+        width: 100%;
+    }
+}
